@@ -1,0 +1,230 @@
+
+:root {
+    --color-accent: #ff99cc;
+    --color-accent-soft: #ffcce6;
+    --body-bg: #fff0f5;
+    --background-fill-primary: #ffffff;
+    --background-fill-secondary: #fdeaf1;
+    --border-color-accent: #ff99cc;
+    --border-color-primary: #ffcce6;
+    --button-primary-background-fill: #ff99cc;
+    --button-primary-background-fill-hover: #ff66b3;
+    --button-primary-text-color: white;
+    --button-secondary-background-fill: #ffcce6;
+    --button-secondary-background-fill-hover: #ffb3d9;
+    --button-secondary-text-color: #d9468b;
+    --input-background-fill: #ffffff;
+    --input-border-color: #ffcce6;
+    --input-border-color-focus: #ff99cc;
+    --input-placeholder-color: #f3a8c8;
+    --text-color: #5c3d4c;
+    --text-color-accent: #d9468b;
+    --text-color-soft: #8c6d7b;
+}
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.loader {
+  border: 8px solid #fdeaf1;
+  border-top: 8px solid #ff99cc;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+progress {
+  appearance: none;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #fdeaf1;
+  width: 100%;
+  vertical-align: middle !important;
+}
+
+.progress-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  flex-grow: 1;
+}
+
+progress::-webkit-progress-value {
+  background-color: #ff99cc;
+}
+
+progress::-moz-progress-bar {
+  background-color: #ff99cc;
+}
+
+progress::after {
+  content: attr(value '%');
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color-accent);
+  font-size: 14px;
+}
+
+.loader-container > span {
+  margin-left: 5px;
+}
+
+.progress-bar > .generating {
+  display: none !important;
+}
+
+.progress-bar{
+  height: 30px !important;
+}
+
+.progress-bar span {
+    text-align: right;
+    width: 215px;
+}
+div:has(> #positive_prompt) {
+    border: none;
+}
+
+#positive_prompt {
+    padding: 1px;
+    background: var(--background-fill-primary);
+}
+
+.type_row {
+  height: 84px !important;
+}
+
+.type_row_half {
+  height: 34px !important;
+}
+
+.refresh_button {
+  border: none !important;
+  background: none !important;
+  font-size: none !important;
+  box-shadow: none !important;
+  color: var(--color-accent) !important;
+}
+
+.advanced_check_row {
+  width: 330px !important;
+}
+
+.min_check {
+  min-width: min(1px, 100%) !important;
+}
+
+.resizable_area {
+  resize: vertical;
+  overflow: auto !important;
+}
+
+.performance_selection label {
+    width: 140px !important;
+}
+
+.aspect_ratios label {
+    flex: calc(50% - 5px) !important;
+    background-color: var(--background-fill-secondary);
+    border-radius: 8px;
+}
+
+.aspect_ratios label span {
+    white-space: nowrap !important;
+}
+
+.aspect_ratios label input {
+    margin-left: -5px !important;
+}
+
+.lora_enable label {
+  height: 100%;
+}
+
+.lora_enable label input {
+  margin: auto;
+}
+
+.lora_enable label span {
+  display: none;
+}
+
+#context-menu{
+    z-index:9999;
+    position:absolute;
+    display:block;
+    padding:0px 0;
+    border:2px solid var(--color-accent);
+    border-radius:8px;
+    box-shadow:1px 1px 2px var(--color-accent-soft);
+    width: 200px;
+    background-color: var(--body-bg);
+}
+
+.context-menu-items{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.context-menu-items a{
+    display:block;
+    padding:5px;
+    cursor:pointer;
+    color: var(--text-color);
+}
+
+.context-menu-items a:hover{
+    background: var(--color-accent-soft);
+}
+
+.gradio-container{
+  overflow: visible;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+}
+
+.final_gallery {
+    background-color: var(--background-fill-secondary);
+}
+
+.image_gallery {
+    border: 2px dashed var(--border-color-primary);
+    border-radius: 15px;
+}
+
+#final_gallery {
+    min-height: 768px;
+}
+
+button, .gr-button {
+    border-radius: 20px !important;
+    border-width: 2px !important;
+}
+
+.gr-button-primary {
+    background: var(--button-primary-background-fill) !important;
+    border-color: var(--button-primary-background-fill-hover) !important;
+    color: var(--button-primary-text-color) !important;
+}
+
+.gr-button-secondary {
+    background: var(--button-secondary-background-fill) !important;
+    border-color: var(--button-secondary-background-fill-hover) !important;
+    color: var(--button-secondary-text-color) !important;
+}
+
+.selected {
+    background: var(--color-accent-soft) !important;
+    border-color: var(--color-accent) !important;
+}
