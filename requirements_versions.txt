@@ -22,4 +22,5 @@ packaging==24.1
 rembg==2.0.57
 groundingdino-py==0.4.0
 segment_anything==1.0
-deepdanbooru-tagger==0.1.1
+git+https://github.com/ShinChven/deepdanbooru-tagger.git
+supervision==0.20.0
